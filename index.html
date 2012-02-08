@@ -2,7 +2,7 @@
 <html lang="en">
   <head>
     <meta charset="utf-8">
-    <title>Bootstrap, from Twitter</title>
+    <title>Bober</title>
     <meta name="description" content="">
     <meta name="author" content="">
 
@@ -15,10 +15,13 @@
     <link href="assets/css/bootstrap.css" rel="stylesheet">
     <style type="text/css">
       body {
-        padding-top: 60px;
+        padding-top: 30px;
         padding-bottom: 40px;
+		background-image: url('http://subtlepatterns.com/patterns/grid_noise.png');
       }
-      #myCarousel {width: 785px;}
+      #myCarousel {width: 785px; border: 1px #3f3f3f solid;}
+	  .mini {opacity: 0.4; border: 1px #3f3f3f solid;}
+	  .mact {opacity: 1;}
     </style>
     <link href="assets/css/bootstrap-responsive.css" rel="stylesheet">
 
@@ -31,7 +34,7 @@
   </head>
 
   <body>
-     
+ <!--    
     <div class="navbar navbar-fixed-top">
       <div class="navbar-inner">
         <div class="container">
@@ -47,11 +50,11 @@
               <li><a href="#">О нас</a></li>
               <li><a href="#">Контакты</a></li>
             </ul>
-          </div><!--/.nav-collapse -->
+          </div>
         </div>
       </div>
     </div>
-      
+-->      
        <div class="container" align="center">
           <div id="myCarousel" class="carousel slide">
             <div class="carousel-inner">
@@ -80,22 +83,20 @@
                 </div>
               </div>
             </div>
-            <a class="left carousel-control" href="#myCarousel" data-slide="prev">&lsaquo;</a>
-            <a class="right carousel-control" href="#myCarousel" data-slide="next">&rsaquo;</a>
           </div>
       
         <table>
             <tr>
-                <td><img id="sd" link="0" src="http://placehold.it/260x180" /></td>
-                <td><img id="sd" link="1" src="http://placehold.it/260x180" /></td>
-                <td><img id="sd" link="2" src="http://placehold.it/260x180" /></td>
+                <td><img class="mini mact" link="0" src="assets/img/first_m.png" /></td>
+                <td><img class="mini" link="1" src="assets/img/second_m.png" /></td>
+                <td><img class="mini" link="2" src="assets/img/third_m.png" /></td>
             </tr>
         </table>
 
       <hr>
 
       <footer>
-        <p>&copy; Студия "Бобёр" 2012</p>
+        <p>&copy; Студия <a href="http://shop.esnn.tv/images/crossed.jpeg">"Бобёр"</a> 2012</p>
       </footer>
 
     </div> <!-- /container -->
@@ -117,14 +118,15 @@
     <script src="assets/js/bootstrap-carousel.js"></script>
     <script src="assets/js/bootstrap-typeahead.js"></script>
     <script>
-        $('#myCarousel').carousel({
-  interval: 10000
-});
-        $('img').click(function () {
+        $('#myCarousel').carousel({interval: 9999999});
+        $('.mini').click(function () {
+					$('.mact').removeClass('mact');
+					$(this).addClass('mact');
                     var a = $(this).attr('link');
                     $('#myCarousel').carousel(a*1);
                     
          });
+
     </script>
   </body>
 </html>
