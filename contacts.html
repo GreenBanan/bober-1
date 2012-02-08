@@ -22,6 +22,8 @@
       #myCarousel {width: 785px; border: 1px #3f3f3f solid;}
 	  .mini {opacity: 0.4; border: 1px #3f3f3f solid;}
 	  .mact {opacity: 1;}
+	  .active {background-color: transparent !important;}
+	  #myModal {display: none}
     </style>
     <link href="assets/css/bootstrap-responsive.css" rel="stylesheet">
 
@@ -61,51 +63,42 @@
           <div class="well sidebar-nav">
             <ul class="nav nav-list">
               <li class="nav-header">Меню</li>
-              <li class="active"><a href="index.html">Главная</a></li>
+              <li><a href="index.html">Главная</a></li>
               <li><a href="#">О нас</a></li>
-              <li><a href="contacts.html">Контакты</a></li>
+              <li class="active"><a href="contacts.html">Контакты</a></li>
             </ul>
           </div><!--/.well -->
         </div><!--/span-->
-        <div class="span9" align="center">
-          <div id="myCarousel" class="carousel slide">
-            <div class="carousel-inner">
-              <div class="item active">
-                <img src="assets/img/first.png" alt="">
-                <div class="carousel-caption">
-                  <h4>esnn.tv</h4>
-                  <p>Проект призванный соединить всех геймеров СНГ</p>
-                  <p><a href="#">Подробнее</a></p>
-                </div>
-              </div>
-              <div class="item">
-                <img src="assets/img/second.png" alt="">
-                <div class="carousel-caption">
-                  <h4>esnn.org</h4>
-                  <p>Первоначальная разработка, которая была предназначена в основном для новостей.</p>
-                  <p><a href="#">Подробнее</a></p>
-                </div>
-              </div>
-              <div class="item">
-                <img src="assets/img/third.png" alt="">
-                <div class="carousel-caption">
-                  <h4>shop.esnn.tv</h4>
-                  <p>Сайт поможет без труда выбрать или создать майку с доставкой в любую точку СНГ.</p>
-                  <p><a href="#">Подробнее</a></p>
-                </div>
-              </div>
-            </div>
-          </div>
-      
-        <table>
-            <tr>
-                <td><img class="mini mact" link="0" src="assets/img/first_m.png" /></td>
-                <td><img class="mini" link="1" src="assets/img/second_m.png" /></td>
-                <td><img class="mini" link="2" src="assets/img/third_m.png" /></td>
-            </tr>
-        </table>
+        <div class="span9">
+		
+				<p>Если Вы все таки решили работать с нами, вы можете с нами связаться следующими способами:</p>
+				<ul>
+				<li>ICQ - 588373692</li>
+				<li>Skype - bobyer</li>
+				<li>Phone - +37529123456</li>
+				</ul>
+				<p>А если вы очень ленивый или занятой, то мы можем <a data-toggle="modal" href="#myModal">сами с вами связаться</a> для обсуждения деталей.</p>
+				
+<div id="myModal" class="modal">
+  <div class="modal-header">
+    <a class="close" data-dismiss="modal">×</a>
+    <h3>Оставьте ваши контакты для связи</h3>
+  </div>
+  <div class="modal-body">
+	<p>Так как подход к клиенту у нас уникальный, то мы не будем делить форму на множество полей. В поле ниже в произвольной форме укажите доступные контакты и то, как приемлимо к вам обратиться. Для исключения ожидания, сразу можете указать тип предполагаемой работы.</p>
+    <textarea style="width: 520px;" rows="10"></textarea>
+	<p><b>*</b> - Мы в свою очередь гарантируем, что свяжемся с вами в течении 24 часов.</p>
+  </div>
+  <div class="modal-footer">
+  <a href="#" class="btn" data-dismiss="modal">Я передумал</a>
+    <a href="#" class="btn btn-primary">Готово</a>
+    
+  </div>
+</div>
+
+
 		</div>
-		</div>
+</div>
 
       <hr>
 
@@ -131,16 +124,8 @@
     <script src="assets/js/bootstrap-collapse.js"></script>
     <script src="assets/js/bootstrap-carousel.js"></script>
     <script src="assets/js/bootstrap-typeahead.js"></script>
-    <script>
-        $('#myCarousel').carousel({interval: 9999999});
-        $('.mini').click(function () {
-					$('.mact').removeClass('mact');
-					$(this).addClass('mact');
-                    var a = $(this).attr('link');
-                    $('#myCarousel').carousel(a*1);
-                    
-         });
-
-    </script>
+	<script>
+		$('#myModal').modal('hide');
+	</script>
   </body>
 </html>
