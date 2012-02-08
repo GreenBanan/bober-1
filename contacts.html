@@ -1,0 +1,131 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <title>Bober</title>
+    <meta name="description" content="">
+    <meta name="author" content="">
+
+    <!-- Le HTML5 shim, for IE6-8 support of HTML elements -->
+    <!--[if lt IE 9]>
+      <script src="http://html5shim.googlecode.com/svn/trunk/html5.js"></script>
+    <![endif]-->
+
+    <!-- Le styles -->
+    <link href="assets/css/bootstrap.css" rel="stylesheet">
+    <style type="text/css">
+      body {
+        padding-top: 30px;
+        padding-bottom: 40px;
+		background-image: url('http://subtlepatterns.com/patterns/grid_noise.png');
+      }
+      #myCarousel {width: 785px; border: 1px #3f3f3f solid;}
+	  .mini {opacity: 0.4; border: 1px #3f3f3f solid;}
+	  .mact {opacity: 1;}
+	  .active {background-color: transparent !important;}
+	  #myModal {display: none}
+    </style>
+    <link href="assets/css/bootstrap-responsive.css" rel="stylesheet">
+
+    <!-- Le fav and touch icons -->
+    <link rel="shortcut icon" href="images/favicon.ico">
+    <link rel="apple-touch-icon" href="images/apple-touch-icon.png">
+    <link rel="apple-touch-icon" sizes="72x72" href="images/apple-touch-icon-72x72.png">
+    <link rel="apple-touch-icon" sizes="114x114" href="images/apple-touch-icon-114x114.png">
+
+  </head>
+
+  <body>
+ <!--    
+    <div class="navbar navbar-fixed-top">
+      <div class="navbar-inner">
+        <div class="container">
+          <a class="btn btn-navbar" data-toggle="collapse" data-target=".nav-collapse">
+            <span class="icon-bar"></span>
+            <span class="icon-bar"></span>
+            <span class="icon-bar"></span>
+          </a>
+          <a class="brand" href="#">Бобёр</a>
+          <div class="nav-collapse">
+            <ul class="nav">
+              <li class="active"><a href="#">Главная</a></li>
+              <li><a href="#">О нас</a></li>
+              <li><a href="#">Контакты</a></li>
+            </ul>
+          </div>
+        </div>
+      </div>
+    </div>
+-->      
+ <div class="container-fluid">
+      <div class="row-fluid">
+        <div class="span3">
+          <div class="well sidebar-nav">
+            <ul class="nav nav-list">
+              <li class="nav-header">Меню</li>
+              <li><a href="index.html">Главная</a></li>
+              <li><a href="#">О нас</a></li>
+              <li class="active"><a href="contacts.html">Контакты</a></li>
+            </ul>
+          </div><!--/.well -->
+        </div><!--/span-->
+        <div class="span9">
+		
+				<p>Если Вы все таки решили работать с нами, вы можете с нами связаться следующими способами:</p>
+				<ul>
+				<li>ICQ - 588373692</li>
+				<li>Skype - bobyer</li>
+				<li>Phone - +37529123456</li>
+				</ul>
+				<p>А если вы очень ленивый или занятой, то мы можем <a data-toggle="modal" href="#myModal">сами с вами связаться</a> для обсуждения деталей.</p>
+				
+<div id="myModal" class="modal">
+  <div class="modal-header">
+    <a class="close" data-dismiss="modal">×</a>
+    <h3>Оставьте ваши контакты для связи</h3>
+  </div>
+  <div class="modal-body">
+	<p>Так как подход к клиенту у нас уникальный, то мы не будем делить форму на множество полей. В поле ниже в произвольной форме укажите доступные контакты и то, как приемлимо к вам обратиться. Для исключения ожидания, сразу можете указать тип предполагаемой работы.</p>
+    <textarea style="width: 520px;" rows="10"></textarea>
+	<p><b>*</b> - Мы в свою очередь гарантируем, что свяжемся с вами в течении 24 часов.</p>
+  </div>
+  <div class="modal-footer">
+  <a href="#" class="btn" data-dismiss="modal">Я передумал</a>
+    <a href="#" class="btn btn-primary">Готово</a>
+    
+  </div>
+</div>
+
+
+		</div>
+</div>
+
+      <hr>
+
+      <footer align="center">
+        <p>&copy; Студия <a href="http://shop.esnn.tv/images/crossed.jpeg">"Бобёр"</a> 2012</p>
+      </footer>
+
+    </div> <!-- /container -->
+
+    <!-- Le javascript
+    ================================================== -->
+    <!-- Placed at the end of the document so the pages load faster -->
+    <script src="assets/js/jquery.js"></script>
+    <script src="assets/js/bootstrap-transition.js"></script>
+    <script src="assets/js/bootstrap-alert.js"></script>
+    <script src="assets/js/bootstrap-modal.js"></script>
+    <script src="assets/js/bootstrap-dropdown.js"></script>
+    <script src="assets/js/bootstrap-scrollspy.js"></script>
+    <script src="assets/js/bootstrap-tab.js"></script>
+    <script src="assets/js/bootstrap-tooltip.js"></script>
+    <script src="assets/js/bootstrap-popover.js"></script>
+    <script src="assets/js/bootstrap-button.js"></script>
+    <script src="assets/js/bootstrap-collapse.js"></script>
+    <script src="assets/js/bootstrap-carousel.js"></script>
+    <script src="assets/js/bootstrap-typeahead.js"></script>
+	<script>
+		$('#myModal').modal('hide');
+	</script>
+  </body>
+</html>
